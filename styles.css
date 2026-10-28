@@ -1,0 +1,251 @@
+:root{
+    --c:#9b2226
+}
+
+html{
+    scroll-behavior:smooth
+}
+
+html:has(.ventana:target){
+    overflow:hidden
+}
+
+body{
+    margin:0;background:#120d0d;
+    color:#ddd3c3;
+    font-family:Palatino,"Book Antiqua",Georgia,serif;line-height:1.65;
+}
+
+header{
+    max-width:720px;
+    margin:0 auto;
+    padding:64px 16px 28px;
+    border-bottom:3px double #5a1a1a
+}
+
+header .titulo{
+    text-align:center
+}
+
+.titulo .lema{
+    margin:0;
+    text-transform:uppercase;
+    letter-spacing:.35em;
+    font-size:.8rem;
+    color:#b5651d
+}
+
+.titulo h1{
+    font-size:clamp(3.5rem,14vw,7rem);
+    letter-spacing:.18em;
+    margin:6px 0 14px;
+    text-transform:uppercase;
+    color:#efe6d4;
+    font-weight:normal;
+}
+
+.titulo>p:last-child{
+    font-style:italic;
+    color:#a89c8c
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:5;
+    background:#120d0d;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:4px 18px;
+    padding:10px;
+    border-bottom:1px solid #3a2222
+}
+
+nav a{
+    text-decoration:none;
+    font-size:.85rem;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    color:#a89c8c
+}
+
+nav a:hover{
+    color:#efe6d4
+}
+
+main{
+    max-width:820px;
+    margin:0 auto;
+    padding:24px 16px
+}
+
+main .album{
+    position:relative;
+    overflow:hidden;
+    margin:44px 0;
+    padding:26px 28px;
+    background:#1b1414;
+    border:1px solid var(--c);
+    border-left:10px solid var(--c);
+    scroll-margin-top:50px
+}
+
+main .album:nth-of-type(1){
+    --c:#9b2226
+}
+
+main .album:nth-of-type(2){
+    --c:#b5651d
+}
+
+main .album:nth-of-type(3){
+    --c:#4f7387
+}
+
+main .album:nth-of-type(4){
+    --c:#6b7f3a
+}
+
+main .album:nth-of-type(5){
+    --c:#b8963e
+}
+
+main .album:nth-of-type(6){
+    --c:#8a5a8f
+}
+
+.info h2{
+    margin:0;
+    font-size:2rem;
+    font-weight:normal;
+    letter-spacing:.06em;
+    color:#efe6d4
+}
+
+.info h2 span{
+    display:block;
+    font-size:4.5rem;
+    line-height:.8;
+    color:var(--c);
+    opacity:.35;
+    font-style:italic
+}
+
+.info h3{
+    margin:10px 0 6px;
+    font-weight:normal;
+    font-style:italic;
+    color:var(--c);
+    filter:brightness(1.4)
+}
+
+.info p{
+    max-width:600px
+}
+
+.lista .canciones{
+    columns:2 220px;
+    margin:18px 0 0;
+    padding-left:26px;
+    font-size:1.05rem
+}
+
+.canciones li{
+    padding:3px 0;
+    break-inside:avoid
+}
+
+.canciones li::marker{
+    color:var(--c)
+}
+
+.canciones li a{
+    color:#ddd3c3;
+    text-decoration-color:var(--c);
+    text-underline-offset:4px
+}
+
+.canciones li a:hover{
+    color:#fff;
+    text-decoration-thickness:2px
+}
+
+.fichas .ventana{
+    position:fixed;
+    z-index:50;
+    inset:0;
+    margin:auto;
+    max-width:440px;
+    width:86%;
+    max-height:85vh;
+    overflow-y:auto;
+    height:fit-content;
+    background:#efe6d4;
+    color:#241a1a;
+    border:0;
+    border-top:8px solid var(--c);
+    padding:24px 26px;
+    box-shadow:0 0 0 100vmax rgba(5,2,2,.9),8px 8px 0 var(--c)
+}
+
+.fichas .ventana:not(:target){
+    display:none
+}
+
+.fichas>.ventana:target{
+    display:block
+}
+
+.texto h4{
+    margin:0;
+    font-size:1.7rem;
+    font-weight:normal;
+    letter-spacing:.04em
+}
+
+.texto .de{
+    margin:2px 0 12px;
+    font-size:.85rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:#7a6050
+}
+
+.ventana .reproductor{
+    margin-top:18px;
+    padding:10px;
+    background:#241a1a
+}
+
+.reproductor audio{
+    width:100%;
+    display:block
+}
+
+.pie .cerrar{
+    display:inline-block;
+    margin-top:14px;
+    color:#241a1a;
+    font-size:.85rem;
+    text-transform:uppercase;
+    letter-spacing:.12em
+}
+
+body footer{
+    text-align:center;
+    font-size:.8rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#6d5f5f;
+    padding:30px 16px 50px
+}
+
+@media(max-width:520px){
+    main>.album{
+        padding:18px
+    }
+    .info>h2>span{
+        font-size:3.2rem
+    }
+}
